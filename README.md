@@ -43,12 +43,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-#� �r�e�a�c�t�_�f�i�r�e�b�a�s�e�_�f�i�r�e�s�t�o�r�e�_�f�u�l�l�s�t�a�c�k�_�b�l�o�g�
-�
-�#� �r�e�a�c�t�-�f�i�r�e�b�a�s�e�-�-�f�u�l�l�s�t�a�c�k�-�b�l�o�g�
-�
-�#� �r�e�a�c�t�-�f�i�r�e�b�a�s�e�-�-�f�u�l�l�s�t�a�c�k�-�b�l�o�g�
-�
-�#� �r�e�a�c�t�-�f�i�r�e�b�a�s�e�-�-�f�u�l�l�s�t�a�c�k�-�b�l�o�g�
-�
-�
+
