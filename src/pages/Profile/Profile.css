@@ -1,0 +1,68 @@
+.profilePage {
+  background: #f4f4f4;
+  min-height: 100vh;
+}
+.add_article {
+  display: flex;
+  flex-direction: column;
+}
+.f-l {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-bottom: 0px;
+}
+.f-l > input,
+textarea,
+select {
+  padding: 10px;
+  font-size: 18px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.btn {
+  padding: 10px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.btn-send {
+  padding: 20px;
+  cursor: pointer;
+  margin: 10px;
+  text-align: center;
+  align-items: center;
+  font-size: 18px;
+  background: #4caf50;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  width: calc(100% - 20px);
+}
+.profilePageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.profilePageUl {
+  padding: 0px;
+}
+.profilePageList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--mainGray);;
+  padding: 0px ;
+}
+.profilePageList > h2 {
+  font-family: var(--sansFont);
+}
+.btnactions {
+    display: flex;
+    gap: 10px;
+}
+.btnactions > button {
+    padding: 4px 8px;
+    cursor: pointer;
+}
+/* .btnactions > button > .edit {
+} */

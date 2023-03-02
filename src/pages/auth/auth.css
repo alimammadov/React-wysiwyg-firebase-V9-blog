@@ -1,0 +1,100 @@
+.signup,
+.signin,
+.forgotPassword,
+.resetpassword {
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f8fa;
+
+  height: calc(100vh);
+  text-align: center;
+  margin: 0px auto;
+  position: relative;
+}
+.inputForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  margin: 0px auto;
+  width: 100%;
+}
+.inputForm > label {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 10px;
+  border: 1px solid #e6e6e6;
+}
+.inputForm > label > svg {
+  border-right: 1px solid #ddd;
+  padding: 10px;
+  font-family: inherit;
+  font-weight: 400;
+  fill: #90a4ae;
+}
+.inputForm > label > input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  font-size: 14px;
+  line-height: 24px;
+  color: #a7a7a7;
+}
+.forgot-password {
+  margin-top: 10px;
+  padding: 10px;
+  max-width: 320px;
+  margin: 0px auto;
+  width: 100%;
+}
+.forgot-password > a {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 24px;
+}
+.auth-footer {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  margin: 0px calc(50% - 160px);
+  font-size: 14px;
+  line-height: 24px;
+}
+.auth-footer > a {
+  padding-left: 5px;
+  font-size: 14px;
+  line-height: 24px;
+}
+.logo-box {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.logo-box > svg {
+  width: 80px;
+  height: 80px;
+  fill: #8bc34a;
+  stroke: 1px solid #558b2f;
+}
+.valWarn {
+  border: 1px solid red !important;
+}
+.warn {
+  margin: 0px;
+  font-size: 12px;
+  display: flex;
+  justify-content: end;
+  color: #e91e63;
+}
+.btn-submit {
+  max-width: 320px;
+  margin: 10px auto;
+  width: 100%;
+  background: #8bc34a;
+  border-color: #689f38;
+  border: 1px solid;
+  color: #fff;
+}

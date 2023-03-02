@@ -1,0 +1,14 @@
+
+
+.notfound {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 72px);
+  align-items: center;
+  justify-content: center;
+}
+.notfound > h1 {
+  font-size: 8rem;
+  line-height: 8rem;
+  color: #607d8b;
+}

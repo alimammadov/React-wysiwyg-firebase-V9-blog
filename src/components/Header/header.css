@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.logo > h1 {
+  padding: 0px;
+  margin: 0px;
+}
+.logo > span {
+  font-size: 12px;
+}
+.profile {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1;
+  justify-content: end;
+  align-items: center;
+
+}
+.profile > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.profile > a >  img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.logoutbtn {
+  padding: 0px;
+  margin: 0px;
+  background: none;
+  border: none;
+  margin-left: 20px;
+  cursor: pointer;
+}

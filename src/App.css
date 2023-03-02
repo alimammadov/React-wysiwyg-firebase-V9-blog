@@ -1,38 +1,473 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap");
+
+:root {
+  --mainGreen: #4caf50;
+  --mainRed: #f44336;
+  --mainOrange: #ef6c00;
+  --mainGray: #2d3238;
+  --sansFont: "Cormorant Garamond", serif;
+  --serifFont: "Raleway", sans-serif;
+}
+* {
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* font-family: 'Cormorant Garamond', serif; */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--serifFont);
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0px auto;
 }
-
-.App-header {
-  background-color: #282c34;
+a,
+p,
+span,
+h1 {
+  color: var(--mainGray);
+}
+h1 {
+  color: var(--mainGray);
+  font-size: 30px;
+  line-height: 2rem;
+  margin: 0px;
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+  margin-top: 12px;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+.mt-8 {
+  margin-top: 2rem;
+}
+.forgot-password > a {
+  color: #607d8b;
+}
+.mh100 {
   min-height: 100vh;
+}
+.editPage {
+  width: 50vw;
+  margin: 0px auto;
+}
+.add {
+  border: none;
+  background: var(--mainGreen);
+  color: #fff;
+}
+label {
   display: flex;
   flex-direction: column;
+  font-family: var(--sansFont);
+  margin-bottom: 16px;
+}
+label > span {
+  font-weight: 700;
+}
+label > input {
+  padding: 10px 8px;
+}
+.rdw-editor-wrapper {
+  background: #fff;
+}
+.rdw-editor-main {
+  min-height: 60vh;
+  padding: 8px;
+}
+.w100 {
+  width: 100%;
+}
+.introWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 33.33333%;
+  gap: 30px;
+}
+.introCard {
+  padding: 10px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 11px -2px rgb(37 44 97 / 15%),
+    0 1px 3px 0 rgb(93 100 148 / 20%);
+  min-width: 100px;
+  min-height: 90px;
+  text-align: center;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.introCard:hover {
+  box-shadow: 0 4px 11px -2px rgb(37 44 97 / 25%),
+    0 1px 3px 0 rgb(93 100 148 / 30%);
+}
+.introCardText {
+  text-align: center;
+}
+.introCardIcon {
+  margin-top: 10px;
+  font-size: 14px;
+}
+.inf {font-size: 12px;
+  font-weight: normal;
+  line-height: 22px;}
+.loginPage {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: calc(100vh - 71px);
+  background: #f4f4f4;
+  flex-direction: column;
+}
+.login-with-google-btn {
+  transition: background-color 0.3s, box-shadow 0.3s;
+  width: 150px;
+  padding: 12px 16px 12px 42px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
+
+  color: #757575;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: 12px 11px;
+}
+.login-with-google-btn:hover {
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+.login-with-google-btn:active {
+  background-color: #eeeeee;
+}
+.login-with-google-btn:focus {
+  outline: none;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25),
+    0 0 0 3px #c8dafc;
+}
+.login-with-google-btn:disabled {
+  filter: grayscale(100%);
+  background-color: #ebebeb;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
+  cursor: not-allowed;
+}
+.infoAboutLogin {
+  font-size: 12px;
+}
+.sectionTitle {
+  border-bottom: 1px solid #2d3238;
 }
 
-.App-link {
-  color: #61dafb;
+.footerWrapper {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0 0;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+.f-b {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  display: flex;
+  font-size: 12px;
+  min-height: 110px;
+}
+.f-b > nav > ul li {
+  display: inline-block;
+  border-left-color: #fff;
+  border-left: 1px solid;
+  padding: 0px 10px;
+  font-size: 12px;
+}
+.f-b > nav > ul li:first-child {
+  border-left: none;
+}
+.f-b > nav > ul li a {
+  color: #fff;
+}
+.inps {
+  visibility: hidden;
+}
+@media only screen and (max-width: 600px) {
+  .header {
+    padding: 10px !important;
+  }
+  .intro {
+    min-height: 30vh !important;
+  }
+  .introWrapper {
+    flex-basis: auto;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .profile > a > b {
+    display: none;
+  }
+  .card_container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  main{
+    margin-top: 20px !important;
+  }
+  .card_header {
+    width: 100% !important;
+  }
+  .card {
+    margin: 15px 0px;
+  }
+  .card_title {
+    font-size: 18px !important;
+    line-height: 20px !important;
+  }
+  .card_desc {
+    margin: 0px !important;
+  }
+  .card_right {
+    overflow: hidden;
+    margin-left: 10px !important;
+    flex-basis: calc(30% - 10px) !important;
+  }
+
+  aside {
+    flex-basis: 100% !important;
+    padding-left: 0px !important;
+    margin-top: 0px !important;
+    margin-bottom: 10px !important;
+    border-left: none !important;
+    margin-left: 0px !important;
+  }
+
+.footerWrapper {
+  flex-direction: column;
+}
+.f-b {
+  flex: 1 1;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  display: flex;
+  font-size: 12px;
+  min-height: auto !important;
+  padding: 10px !important;
+}
+article {
+  padding-bottom: 8vmin;
+  padding-top: 8vmin;
+  max-width: 80vh !important;
+  margin: 0px 20px !important;
+  overflow: hidden;
+}
+.editPage {
+  width: calc(100vw - 40px);}
+  .loginPage {
+    min-height: calc(100vh - 260px) !important;
+  }
+  .infoAboutLogin {
+    max-width: 80vw;
+    text-align: center;
+  }
+  .login-with-google-btn {
+    width: 50vw;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .header {
+    padding: 10px !important;
+  }
+  .intro {
+    min-height: 30vh !important;
+  }
+  .introWrapper {
+    flex-basis: auto;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .profile > a > b {
+    display: none;
+  }
+  .card_container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  main{
+    margin-top: 20px !important;
+  }
+  .card_header {
+    width: 100% !important;
+  }
+  .card {
+    margin: 15px 0px;
+  }
+  .card_title {
+    font-size: 18px !important;
+    line-height: 20px !important;
+  }
+  .card_desc {
+    margin: 0px !important;
+  }
+  .card_right {
+    overflow: hidden;
+    margin-left: 10px !important;
+    flex-basis: calc(30% - 10px) !important;
+  }
+
+  aside {
+    flex-basis: 100% !important;
+    padding-left: 0px !important;
+    margin-top: 0px !important;
+    margin-bottom: 10px !important;
+    border-left: none !important;
+    margin-left: 0px !important;
+  }
+
+.footerWrapper {
+  flex-direction: column;
+}
+.f-b {
+  flex: 1 1;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  display: flex;
+  font-size: 12px;
+  min-height: auto !important;
+  padding: 10px !important;
+}
+article {
+  padding-bottom: 8vmin;
+  padding-top: 8vmin;
+  max-width: 80vh !important;
+  margin: 0px 20px !important;
+  overflow: hidden;
+}
+.editPage {
+  width: calc(100vw - 40px);}
+  .loginPage {
+    min-height: calc(100vh - 260px) !important;
+  }
+  .infoAboutLogin {
+    max-width: 80vw;
+    text-align: center;
+  }
+  .login-with-google-btn {
+    width: 50vw;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .header {
+    padding: 10px !important;
   }
-  to {
-    transform: rotate(360deg);
+  .intro {
+    min-height: 30vh !important;
   }
+  .introWrapper {
+    flex-basis: auto;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .profile > a > b {
+    display: none;
+  }
+  .card_container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  main{
+    margin: 20px !important;
+  }
+  .card_header {
+    width: 100% !important;
+  }
+  .card {
+    margin: 15px 0px;
+  }
+  .card_title {
+    font-size: 18px !important;
+    line-height: 20px !important;
+  }
+  .card_desc {
+    margin: 0px !important;
+  }
+  .card_right {
+    overflow: hidden;
+    margin-left: 10px !important;
+    flex-basis: calc(30% - 10px) !important;
+  }
+
+  aside {
+    flex-basis: 100% !important;
+    padding-left: 0px !important;
+    margin-top: 0px !important;
+    margin-bottom: 10px !important;
+    border-left: none !important;
+    margin-left: 0px !important;
+  }
+
+.footerWrapper {
+  flex-direction: column;
+}
+.f-b {
+  flex: 1 1;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  display: flex;
+  font-size: 12px;
+  min-height: auto !important;
+  padding: 10px !important;
+}
+article {
+  padding-bottom: 8vmin;
+  padding-top: 8vmin;
+  max-width: 80vh !important;
+  margin: 0px 20px !important;
+  overflow: hidden;
+}
+.editPage {
+  width: calc(100vw - 40px);}
+  .loginPage {
+    min-height: calc(100vh - 260px) !important;
+  }
+  .infoAboutLogin {
+    max-width: 80vw;
+    text-align: center;
+  }
+  .login-with-google-btn {
+    width: 50vw;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
 }
